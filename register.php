@@ -66,13 +66,12 @@
       cursor: pointer;
     }
 
-    /* Optional: Style the textarea input */
+    
     textarea {
       height: 100px;
-      resize: none; /* Prevents resizing of the textarea */
+      resize: none; 
     }
 
-    /* Optional: Add a box shadow on focus for a more interactive feel */
     input[type="text"]:focus,
     input[type="password"]:focus,
     input[type="email"]:focus,
@@ -81,7 +80,6 @@
       box-shadow: 0 0 5px #007BFF;
     }
 
-    /* Optional: Style the "Already Registered" link */
     div a {
       color: #007BFF;
       text-decoration: none;
@@ -120,15 +118,11 @@
         array_push($errors, "Address is required");
        }
 
-       // Check if there are any errors
        if (count($errors) > 0) {
-         // Display error messages to the user
          foreach ($errors as $error) {
            echo "<div class='alert alert-danger'>$error</div>";
          }
        } else {
-          // If there are no errors, you can proceed with the registration process
-          // Insert the user's information into the database or perform other actions 
           $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
          
